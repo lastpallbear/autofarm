@@ -1,0 +1,40 @@
+
+
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local label = Instance.new("TextLabel")
+local AUTOFARM = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+main.Position = UDim2.new(0.465616047, 0, 0.0421286039, 0)
+main.Size = UDim2.new(0, 356, 0, 180)
+main.Active = true
+main.Draggable = true
+
+label.Name = "label"
+label.Parent = main
+label.BackgroundColor3 = Color3.fromRGB(0, 85, 0)
+label.Size = UDim2.new(0, 355, 0, 50)
+label.Font = Enum.Font.SciFi
+label.Text = "Phantom Forces auto farm made by lastpallbear#0001"
+label.TextColor3 = Color3.fromRGB(0, 0, 0)
+label.TextSize = 14.000
+
+AUTOFARM.Name = "AUTO FARM"
+AUTOFARM.Parent = main
+AUTOFARM.BackgroundColor3 = Color3.fromRGB(0, 85, 0)
+AUTOFARM.Position = UDim2.new(0, 0, 0.277777791, 0)
+AUTOFARM.Size = UDim2.new(0, 356, 0, 130)
+AUTOFARM.Font = Enum.Font.SciFi
+AUTOFARM.Text = "START"
+AUTOFARM.TextColor3 = Color3.fromRGB(0, 0, 0)
+AUTOFARM.TextSize = 14.000
+AUTOFARM.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/artemking4/PhantomForcesAutoFarm/main/pf_autofarm.lua"))()
+end)
